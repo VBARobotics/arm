@@ -1,5 +1,5 @@
 #import the USB and Time librarys into Python
-import usb.core, usb.util, time, csv
+import usb.core, usb.util, time, csv, sys
 
 #Allocate the name 'RoboArm' to the USB device
 RoboArm = usb.core.find(idVendor=0x1267, idProduct=0x001)
@@ -38,7 +38,10 @@ print "***testcode***"
 ElbowDn=[0,1,0]
 #MoveArm(1,ElbowDn)
 
-with open("motions.txt") as f:
+iFile=sys.argv[1]
+#"motions.txt"
+
+with open(iFile) as f:
     polyShape = []
     for line in f:
            row= map(int, line.split(','))
