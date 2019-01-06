@@ -34,6 +34,8 @@ def MoveArm(Duration, ArmCmd):
 #MoveArm(1,[0,0,1]) #Light on
 #MoveArm(1,[0,0,0]) #Light off
 
+print "Saving Motions to file: arm_motions.txt"
+
 print "x -Exit"
 print "j -Rotate base counter-clockwise"
 print "k -Rotate base clockwise"
@@ -45,38 +47,57 @@ print "y -Wrist up"
 print "b -Wrist down"
 print "t -Grip open"
 print "v -Grip close"
+print "r - light on"
+print "c - light off"
 
 ElbowDn=[0,1,0]
 #MoveArm(1,ElbowDn)
 
 import readchar
-
+f = open('arm_motions.txt', 'w')
     
 while True:
   key=repr(readchar.readchar())
 #  print(key)
   if key=="'x'":
+    f.close()
     break
   if key=="'u'":
+    f.write('16,0,0\n')
     MoveArm(1,[16,0,0])
   if key=="'n'":
+    f.write('32,0,0\n')
     MoveArm(1,[32,0,0])
   if key=="'j'":
+    f.write('0,2,0\n')
     MoveArm(1,[0,2,0])
   if key=="'k'":
+    f.write('0,1,0\n')
     MoveArm(1,[0,1,0])
   if key=="'i'":
+    f.write('64,0,0\n')
     MoveArm(1,[64,0,0])
   if key=="'m'":
+    f.write('128,0,0\n')
     MoveArm(1,[128,0,0])
   if key=="'y'":
+    f.write('4,0,0\n')
     MoveArm(1,[4,0,0])
   if key=="'b'":
+    f.write('8,0,0\n')
     MoveArm(1,[8,0,0])
   if key=="'t'":
+    f.write('2,0,0\n')
     MoveArm(1,[2,0,0])
   if key=="'v'":
+    f.write('1,0,0\n')
     MoveArm(1,[1,0,0])
+  if key=="'r'":
+    f.write('0,0,1\n')
+    MoveArm(1,[0,0,1])
+  if key=="'c'":
+    f.write('0,0,0\n')
+    MoveArm(1,[0,0,0])
 
 
 
