@@ -34,21 +34,21 @@ def MoveArm(Duration, ArmCmd):
 #MoveArm(1,[0,0,1]) #Light on
 #MoveArm(1,[0,0,0]) #Light off
 
-print "Saving Motions to file: arm_motions.txt"
+print ("Saving Motions to file: arm_motions.txt")
 
-print "x -Exit"
-print "j -Rotate base counter-clockwise"
-print "k -Rotate base clockwise"
-print "i -Shoulder up"
-print "m -Shoulder down"
-print "u -Elbow up"
-print "n -Elbow down"
-print "y -Wrist up"
-print "b -Wrist down"
-print "t -Grip open"
-print "v -Grip close"
-print "r - light on"
-print "c - light off"
+print ("x -Exit")
+print ("j -Rotate base counter-clockwise")
+print ("k -Rotate base clockwise")
+print ("i -Shoulder up")
+print ("m -Shoulder down")
+print ("u -Elbow up")
+print ("n -Elbow down")
+print ("y -Wrist up")
+print ("b -Wrist down")
+print ("t -Grip open")
+print ("v -Grip close")
+print ("r - light on")
+print ("c - light off")
 
 ElbowDn=[0,1,0]
 #MoveArm(1,ElbowDn)
