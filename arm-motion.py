@@ -34,7 +34,7 @@ def MoveArm(Duration, ArmCmd):
 #MoveArm(1,[0,0,1]) #Light on
 #MoveArm(1,[0,0,0]) #Light off
 
-print "***testcode***"
+print ("***testcode***")
 ElbowDn=[0,1,0]
 #MoveArm(1,ElbowDn)
 
@@ -45,5 +45,5 @@ with open(iFile) as f:
     polyShape = []
     for line in f:
            row= map(int, line.split(','))
-           print row
+           print (row)
            MoveArm(1,row)
