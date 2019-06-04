@@ -34,10 +34,6 @@ def MoveArm(Duration, ArmCmd):
 #MoveArm(1,[0,0,1]) #Light on
 #MoveArm(1,[0,0,0]) #Light off
 
-print ("***testcode***")
-ElbowDn=[0,1,0]
-#MoveArm(1,ElbowDn)
-
 iFile=sys.argv[1]
 #"motions.txt"
 
